@@ -1,0 +1,32 @@
+/* Feed Page Styles */
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.latest-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-products {
+    grid-template-columns: 1fr;
+  }
+}

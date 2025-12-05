@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to your Aurora account to access exclusive features.">
+  <title>Login | Aurora</title>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="../index.html" class="logo">Aurora</a>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="search" type="search" placeholder="Search products" aria-label="Search products">
+      </div>
+      <div class="actions">
+        <button data-nav-cart class="cart-button" aria-label="Shopping cart">
+          <span class="material-symbols-outlined">shopping_cart</span>
+        </button>
+      </div>
+      <button class="hamburger-menu" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-menu">
+        <div class="mobile-actions"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="auth-wrap">
+      <div class="auth-card glass">
+        <div class="auth-title">
+          <h1>Login</h1>
+          <p>Sign in to your account</p>
+        </div>
+        <form id="login-form" class="form">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-help">
+            <span class="help" id="email-help">Enter your email address</span>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required aria-required="true" minlength="6" aria-describedby="password-help">
+            <span class="help" id="password-help">Password must be at least 6 characters</span>
+          </div>
+          <div class="error" data-error role="alert" aria-live="polite"></div>
+          <button type="submit" class="btn btn-primary submit-btn">Login</button>
+          <p class="help">Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Aurora</h3>
+        <p>Your trusted source for quality products at great prices.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../cart.html">Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: support@aurora.com</p>
+        <p>Phone: +47 123 45 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Aurora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/api.js"></script>
+  <script>
+    API.setBaseURL('https://v2.api.noroff.dev');
+  </script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/ui/toast.js"></script>
+  <script src="../assets/js/ui/authStatus.js"></script>
+  <script src="../assets/js/ui/mobileMenu.js"></script>
+  <script src="../assets/js/pages/login.js"></script>
+</body>
+</html>

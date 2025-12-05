@@ -1,0 +1,97 @@
+/* Checkout Page */
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  margin-bottom: 20px;
+  color: #0066cc;
+}
+
+.radio-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.radio-pill {
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.radio-pill:hover {
+  background-color: #f5f5f5;
+}
+
+.radio-pill[aria-checked="true"] {
+  background-color: #e6f2ff;
+  border-color: #0066cc;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#mini {
+  margin-bottom: 20px;
+}
+
+#mini .between {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 1024px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .radio-pills {
+    flex-direction: column;
+  }
+
+  .radio-pill {
+    width: 100%;
+    text-align: center;
+  }
+}

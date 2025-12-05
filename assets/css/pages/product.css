@@ -1,0 +1,153 @@
+/* Product Detail Page */
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.product-media {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-media img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-info {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.product-rating-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating-value {
+  font-weight: bold;
+}
+
+.product-pricing {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.product-price-row {
+  display: flex;
+  gap: 15px;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.price-old {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+
+.price-current {
+  font-size: 28px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.add-cart-btn {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.share-btn {
+  padding: 15px 20px;
+}
+
+.product-reviews {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.reviews-grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.review-username {
+  font-weight: bold;
+}
+
+.review-rating {
+  color: #666;
+}
+
+.review-text {
+  color: #555;
+  line-height: 1.5;
+}
+
+.error-message {
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .add-cart-btn {
+    width: 100%;
+  }
+}

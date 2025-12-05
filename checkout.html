@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete your purchase at Aurora.">
+  <title>Checkout | Aurora</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="index.html" class="logo">Aurora</a>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="search" type="search" placeholder="Search products" aria-label="Search products">
+      </div>
+      <div class="actions">
+        <button data-nav-cart class="cart-button" aria-label="Shopping cart">
+          <span class="material-symbols-outlined">shopping_cart</span>
+        </button>
+      </div>
+      <button class="hamburger-menu" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-menu">
+        <div class="mobile-actions"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Checkout</h1>
+    <div class="checkout-layout">
+      <div>
+        <div class="section glass">
+          <h3>Payment Method</h3>
+          <div class="radio-pills">
+            <div class="radio-pill" role="radio" aria-checked="true" tabindex="0">Credit Card</div>
+            <div class="radio-pill" role="radio" aria-checked="false" tabindex="0">PayPal</div>
+            <div class="radio-pill" role="radio" aria-checked="false" tabindex="0">Bank Transfer</div>
+          </div>
+        </div>
+        <div class="section glass">
+          <h3>Delivery Address</h3>
+          <form id="checkout-form" class="form">
+            <div class="field">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required aria-required="true">
+            </div>
+            <div class="field">
+              <label for="address">Address *</label>
+              <input type="text" id="address" name="address" required aria-required="true">
+            </div>
+            <div class="field">
+              <label for="city">City *</label>
+              <input type="text" id="city" name="city" required aria-required="true">
+            </div>
+            <div class="field">
+              <label for="zip">ZIP Code *</label>
+              <input type="text" id="zip" name="zip" required aria-required="true" pattern="[0-9A-Za-z -]{3,}" aria-describedby="zip-help">
+              <span class="help" id="zip-help">Enter a valid ZIP code</span>
+            </div>
+            <div class="error" data-error role="alert" aria-live="polite"></div>
+            <button type="submit" class="btn btn-primary submit-btn">Complete Order</button>
+          </form>
+        </div>
+      </div>
+      <div class="section glass">
+        <h3>Order Summary</h3>
+        <div id="mini"></div>
+        <div class="between mt-6">
+          <span><strong>Total:</strong></span>
+          <span id="total"><strong>NOK 0.00</strong></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Aurora</h3>
+        <p>Your trusted source for quality products at great prices.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="account/login.html">Login</a></li>
+          <li><a href="account/register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: support@aurora.com</p>
+        <p>Phone: +47 123 45 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Aurora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/api.js"></script>
+  <script>
+    API.setBaseURL('https://v2.api.noroff.dev');
+  </script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui/toast.js"></script>
+  <script src="assets/js/ui/authStatus.js"></script>
+  <script src="assets/js/ui/mobileMenu.js"></script>
+  <script src="assets/js/pages/checkout-summary.js"></script>
+  <script src="assets/js/pages/checkout.js"></script>
+</body>
+</html>

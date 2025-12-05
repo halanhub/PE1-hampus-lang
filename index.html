@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop the latest products at Aurora. Browse our collection of quality items at great prices.">
+  <title>Shop | Aurora</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/feed.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="index.html" class="logo">Aurora</a>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="search" type="search" placeholder="Search products" aria-label="Search products">
+      </div>
+      <div class="actions">
+        <button data-nav-cart class="cart-button" aria-label="Shopping cart">
+          <span class="material-symbols-outlined">shopping_cart</span>
+        </button>
+      </div>
+      <button class="hamburger-menu" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-menu">
+        <div class="mobile-actions"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container feed">
+    <section class="hero">
+      <div class="content">
+        <h1>Shop Now - Save Big Today!</h1>
+        <p>Get the best products at unbeatable prices. Start shopping and find your perfect match!</p>
+        <div class="row">
+          <a href="#grid" class="btn btn-primary">Shop Now</a>
+          <a href="account/register.html" class="btn btn-ghost">Create account</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest" class="latest-section glass" aria-label="Latest products">
+      <h2>Latest Products</h2>
+      <div class="carousel">
+        <div class="track"></div>
+        <div class="controls">
+          <button class="carousel-btn" data-prev aria-label="Previous slide">←</button>
+          <button class="carousel-btn" data-next aria-label="Next slide">→</button>
+        </div>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <section aria-label="All products">
+      <div class="between mb-6">
+        <h2>All Products</h2>
+      </div>
+      <div id="grid" class="grid grid-products"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Aurora</h3>
+        <p>Your trusted source for quality products at great prices.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="account/login.html">Login</a></li>
+          <li><a href="account/register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: support@aurora.com</p>
+        <p>Phone: +47 123 45 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Aurora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/api.js"></script>
+  <script>
+    API.setBaseURL('https://v2.api.noroff.dev');
+  </script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui/toast.js"></script>
+  <script src="assets/js/ui/skeleton.js"></script>
+  <script src="assets/js/ui/productCard.js"></script>
+  <script src="assets/js/ui/carousel.js"></script>
+  <script src="assets/js/ui/clickableImages.js"></script>
+  <script src="assets/js/ui/authStatus.js"></script>
+  <script src="assets/js/ui/mobileMenu.js"></script>
+  <script src="assets/js/pages/feed.js"></script>
+</body>
+</html>
