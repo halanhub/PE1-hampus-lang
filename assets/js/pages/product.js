@@ -4,6 +4,14 @@
 // Learned about DOM manipulation from: https://www.youtube.com/watch?v=0ik6X4DJKCc
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Header actions
+  const cartBtn = document.querySelector('[data-nav-cart]');
+  if (cartBtn) {
+    cartBtn.addEventListener('click', function() {
+      location.href = 'cart.html';
+    });
+  }
+  
   // Get product ID from URL
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
