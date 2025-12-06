@@ -22,7 +22,9 @@
   padding: 20px;
   position: sticky;
   top: 100px;
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .empty-cart {
@@ -95,7 +97,7 @@
 
 .checkout-btn {
   width: 100%;
-  margin-top: 20px;
+  margin-top: auto;
   padding: 15px;
   font-size: 16px;
 }
